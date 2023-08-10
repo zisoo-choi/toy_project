@@ -21,4 +21,10 @@ public class Member {
 
     private String userPhone;
 
+    public Member(String userId, String userPw, String userAddress, String userPhone) {
+        this.userId = userId;
+        this.userPw = userPw;
+        this.userAddress = userAddress;
+        this.userPhone = userPhone;
+    }
 }
