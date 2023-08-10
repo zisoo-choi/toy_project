@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/member")
 public class SignUpController {
 
-     private SignUpService signUpService;
+     private final SignUpService signUpService;
 
     @PostMapping("/sign-up")
     public boolean signUp(@RequestBody SignUpRequestForm requestForm) {

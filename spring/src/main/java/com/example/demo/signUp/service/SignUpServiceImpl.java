@@ -14,13 +14,13 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class SignUpServiceImpl implements SignUpService{
 
-    private SignUpRepository signUpRepository;
+    private final SignUpRepository signUpRepository;
 
     @Override
     public boolean register(SignUpRequestForm requestForm) {
         // 1. 해당 아이디가 존재하는 지?
         Optional<Member> maybeMember = signUpRepository.findByUserId(requestForm.getUserId());
-        log.info("maybemember", maybeMember);
+        log.info("maybeMember", maybeMember);
 
         // 1-1 (존재 시) false 혹은 return
         if(maybeMember.isPresent()) {
