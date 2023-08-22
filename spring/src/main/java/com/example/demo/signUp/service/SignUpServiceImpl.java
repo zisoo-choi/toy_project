@@ -1,6 +1,6 @@
 package com.example.demo.signUp.service;
 
-import com.example.demo.signUp.controller.form.SignUpRequestForm;
+import com.example.demo.signUp.controller.form.request.SignUpRequestForm;
 import com.example.demo.signUp.entity.Member;
 import com.example.demo.signUp.repository.SignUpRepository;
 import lombok.RequiredArgsConstructor;
@@ -33,4 +33,6 @@ public class SignUpServiceImpl implements SignUpService{
         signUpRepository.save(member);
         return true;
     }
+
+
 }

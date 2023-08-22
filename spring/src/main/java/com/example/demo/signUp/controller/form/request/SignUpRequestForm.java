@@ -1,4 +1,4 @@
-package com.example.demo.signUp.controller.form;
+package com.example.demo.signUp.controller.form.request;
 
 import com.example.demo.signUp.entity.Member;
 import lombok.AllArgsConstructor;

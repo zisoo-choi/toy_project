@@ -1,6 +1,6 @@
 package com.example.demo.SignUpMockingTest;
 
-import com.example.demo.signUp.controller.form.SignUpRequestForm;
+import com.example.demo.signUp.controller.form.request.SignUpRequestForm;
 import com.example.demo.signUp.entity.Member;
 import com.example.demo.signUp.repository.SignUpRepository;
 import com.example.demo.signUp.service.SignUpServiceImpl;
