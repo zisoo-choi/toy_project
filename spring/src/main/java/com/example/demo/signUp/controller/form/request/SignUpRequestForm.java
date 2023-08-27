@@ -14,14 +14,14 @@ public class SignUpRequestForm {
 
      private String userId;
      private String userPw;
-     private String userAddress;
+     private String email;
      private String userPhone;
 
     public Member toMember() {
         return Member.builder()
-                .userId(userId)
-                .userPw(userPw)
-                .userAddress(userAddress)
+                .name(userId)
+                .password(userPw)
+                .email(email)
                 .userPhone(userPhone)
                 .build();
     }

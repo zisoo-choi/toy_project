@@ -5,5 +5,5 @@ import com.example.demo.kakao.dto.KakaoOAuthToken;
 public interface KakaoOauthService {
     String getAuthorizeCode();
 
-    String kakaoCallback(String code);
+    KakaoOAuthToken kakaoCallback(String code);
 }
