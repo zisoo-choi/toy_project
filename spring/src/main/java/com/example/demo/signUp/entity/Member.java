@@ -21,10 +21,18 @@ public class Member {
 
     private String userPhone;
 
-    public Member(String userId, String userPw, String userAddress, String userPhone) {
+    @Getter
+    private String email;
+
+    public Member(String userId, String userPw, String userAddress, String userPhone, String email) {
         this.userId = userId;
         this.userPw = userPw;
         this.userAddress = userAddress;
         this.userPhone = userPhone;
+        this.email = email;
+    }
+
+    public Member(String email) {
+        this.email = email;
     }
 }

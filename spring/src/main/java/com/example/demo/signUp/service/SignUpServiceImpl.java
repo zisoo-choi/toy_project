@@ -34,5 +34,31 @@ public class SignUpServiceImpl implements SignUpService{
         return true;
     }
 
+    @Override
+    public Long findAccountIdByEmail(String email){
+        if(email == null){
+            return -1L;
+        }
 
+        final Optional<Member> maybeAccount = signUpRepository.findByEmail(email);
+
+        if(maybeAccount.isEmpty()){
+            return null;
+        }
+
+        return maybeAccount.get().getId();
+    }
+
+    @Override
+    public Long signUpWithEmail(String email) {
+        final Optional<Member> maybeAccount = signUpRepository.findByEmail(email);
+
+        if (maybeAccount.isPresent()) {
+            return maybeAccount.get().getId();
+        }
+
+        final Member account = new Member(email);
+
+        return signUpRepository.save(account).getId();
+    }
 }
